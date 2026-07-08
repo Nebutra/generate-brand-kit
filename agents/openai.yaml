@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Brand Kit"
+  short_description: "Create brand systems and production assets"
+  default_prompt: "Use $generate-brand-kit to create a reusable brand kit and product-ready asset pipeline for this project."
