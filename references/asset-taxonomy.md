@@ -19,6 +19,7 @@ Use this as a scoping matrix, not a mandate to produce every row. Mark each item
 ## Core Visual Identity
 
 - primary, secondary, symbol, wordmark, lockup, monochrome, reverse, small-size, and co-brand variants
+- default responsive suite: standalone symbol, standalone wordmark, primary symbol+wordmark combination, horizontal/vertical lockups, monochrome/reverse treatments, and simplified micro mark
 - clear space, minimum size, construction/proportion rationale, background rules, misuse examples
 - master SVG/PDF plus approved raster masters
 - color palette with HEX/RGB/CMYK/Pantone targets and verified accessible foreground/background pairs

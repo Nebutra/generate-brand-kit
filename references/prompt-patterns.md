@@ -11,20 +11,40 @@ Palette: <named colors>. Lighting: <direction/quality>.
 Design feeling: <era/product/culture>. No text, no logo, no watermark.
 ```
 
-## Form-Family Study Prompt
+## Graphic Symbol Study Prompt
+
+Do not write this prompt until the cultural/art concept dossier is complete and
+compiled through `logo-prompt-compiler.md`.
 
 ```text
-Create a black-and-white identity study for <brand>, not a finished logo.
-Business tension: <force A> versus/with <force B>.
-Explore one formal operation only: <split/join/offset/phase/fold/repeat/shared-axis/etc>.
-Apply it consistently to one wordmark fragment, one monogram or symbol, one
-layout motif, and one motion keyframe sequence. Show construction relationships,
-not materials or mockups. Avoid literal pictograms and these semantic
-collisions: <specific nouns/category clichés>. No gradients, effects or generated prose.
+Design one original standalone brand symbol for <category>, centered on a plain
+<background>. It should feel <three perceptual qualities>. Create a <holistic
+silhouette> defined by <one signature visual event>. Use <curve/angle/mass/
+counterform behavior>. Palette: <colors and structural roles>. Make it authored,
+optically balanced, memorable at small size, and suitable for a long-lived
+international identity. One symbol only, no text or board. Avoid <three collisions>.
 ```
 
 Run this prompt separately for at least three operations. Do not ask one
 generation to produce a random logo grid; each family needs a stated invariant.
+
+When external reference images are justified, select them through the provenance
+and operation rules in `logo-design-principles.md` and append an explicit
+non-copying clause.
+Send one candidate per generation; never ask for a board or variants.
+
+## Wordmark Study Prompt
+
+```text
+Create exactly one typographic wordmark reading <BRAND>, with no graphic symbol.
+Typography strategy: <humanist/geometric/grotesque/serif/etc>.
+Distinctive invariant: <terminal/counter/width/stress/rhythm rule>.
+Keep every letter immediately readable and spell <BRAND> exactly once.
+Plain background. No icon, monogram, board, variants, mockup or extra text.
+```
+
+Treat generated wordmarks as direction studies. Recompose the approved direction
+with real licensed fonts and vector typography before production.
 
 ## Approved Direction Prompt
 
@@ -32,9 +52,16 @@ generation to produce a random logo grid; each family needs a stated invariant.
 Refine the approved <brand> form family governed by <operation>.
 Preserve these invariants: <geometry/spacing/relationship>.
 Remove incidental object readings identified in review: <collisions>.
-Produce a black-and-white primary mark and wordmark relationship at 16, 24,
-32 and 48 px. No material, mockup, gradient, lighting or extra symbol.
+Refine only the approved <symbol/wordmark> master at 16, 24, 32 and 48 px,
+plus a separate monochrome reduction for validation. Do not introduce the other
+logo component in this call.
 ```
+
+## Lockup Composition Rule
+
+Do not use image generation. Place the approved symbol and approved wordmark as
+unchanged assets; tune only scale ratio, optical gap, baseline, alignment and
+clear space. Export horizontal and vertical arrangements from the same masters.
 
 ## Production Icon Prompt
 

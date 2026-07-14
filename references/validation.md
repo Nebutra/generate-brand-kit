@@ -29,12 +29,18 @@ Do not delete code-level compatibility uses of `legacy` or third-party import na
 - Confirm no suggestive/anatomical readings after scaling.
 - Run an unprompted five-second noun test with multiple viewers before sharing
   the rationale. Record the first reading; do not negotiate with a collision.
-- Compare at least three structurally different black-and-white families before
-  approving a mark. Cosmetic variations do not count as separate families.
+- Compare at least three structurally different color families before approving
+  a mark. Cosmetic variations do not count as separate families. Validate each
+  with a separate monochrome reduction rather than forcing the primary concept
+  to be black and white.
 - Place candidates in a category thumbnail neighborhood at 24-32 px and test
   both similarity and disappearance into generic geometry.
 - Verify that the selected formal operation extends coherently into wordmark,
   layout and motion. Reject one-off symbolic tricks.
+- Require a complete responsive logo suite by default: standalone symbol,
+  standalone wordmark, primary symbol+wordmark lockup, horizontal and vertical
+  arrangements, monochrome/reverse variants, and a simplified small-size mark.
+  Any omitted member needs an explicit not-applicable rationale.
 
 ## Selected-Kit Checks
 

@@ -41,11 +41,16 @@ measured on **Fame** (% who link the asset to you) and **Uniqueness**
 - **Haviv's three-criterion test** (Chermayeff & Geismar & Haviv):
   *appropriate, distinctive/memorable, simple.* "Not about what one likes:
   about what works." A mark may need to be unusual, even awkward, to hook
-  memory. Design in pencil / black-and-white first; color is the last layer.
-- **Wordmark vs symbol vs monogram** is strategic: wordmarks for short
-  distinctive names and new brands needing name awareness; monograms for
-  long names and tiny surfaces; standalone symbols need justification
-  (long name, entity consolidation, visual shorthand — Chase, NBC).
+  memory. Validate underlying form without effects, but do not confuse
+  monochrome validation with the final identity: color may be a structural
+  distinctive asset and should appear in client-facing concept exploration.
+- **Wordmark, symbol, and monogram are exploration entries, not mutually
+  exclusive final deliverables.** Wordmark-first suits short distinctive names
+  and new brands needing name awareness; monogram-first suits long names and
+  tiny surfaces; symbol-first needs strategic justification. A production
+  identity normally resolves these into a responsive suite: standalone symbol,
+  standalone wordmark, primary combination lockup, horizontal/vertical
+  arrangements, monochrome/reverse variants, and a small-size simplification.
 - **Gestalt mechanics:** closure (WWF panda), figure-ground/negative space
   (FedEx arrow), similarity (Olympic rings' uniform stroke). One silhouette,
   one signal.
@@ -83,7 +88,9 @@ specific relationship and remain useful after the trend ages.
 
 ## Explore families before convergence
 
-- Start in black and white; do not use material, glow or gradients to rescue weak form.
+- Explore in the intended palette when color defines hierarchy, overlap or
+  modular relationships. Export a separate monochrome proof to verify the form;
+  do not present monochrome as the mandatory primary concept.
 - Produce at least three structurally different families, not three cosmetic variations.
 - Include a wordmark-led family whenever the name is distinctive and still building awareness.
 - Include a counterform family only when the negative shape has no dominant unintended reading.
@@ -116,6 +123,10 @@ and banned readings.
    at 24-32 px. Reject both lookalikes and forms that disappear into generic geometry.
 10. **Operation integrity test:** verify that one clear formal operation governs
     wordmark, icon, layout and motion rather than a one-off symbolic trick.
+11. **Suite completeness test:** verify the symbol works alone, the wordmark
+    works alone, the combination has intentional spacing, horizontal and
+    vertical lockups remain balanced, and the small-size variant is not merely
+    a scaled-down complex master.
 
 ## Verbal identity
 

@@ -25,30 +25,47 @@ command line.
    - State 2-4 business relationships without drawing product nouns.
    - Map each relationship to candidate formal operations.
 
-3. **Parallel operation families**
-   - Generate at least three independent black-and-white families.
-   - Each family uses one invariant operation across wordmark, symbol, layout and motion.
+3. **Cultural/art foundation gate**
+   - Complete `logo-cultural-art-foundations.md`'s concept dossier.
+   - Cite the name, product, historical, artistic, scientific, typographic or craft source.
+   - Define measurable construction invariants before prompts or billed calls.
 
-4. **Collision and neighborhood proof**
+4. **Parallel symbol families**
+   - Generate at least three independent graphic-symbol families in the intended brand palette.
+   - Each family uses one invariant operation and contains no wordmark or generated text.
+   - Each task outputs one isolated symbol only, never a board or contact sheet.
+
+5. **Parallel wordmark families**
+   - Explore typography separately from the symbol branch.
+   - Generate or typeset one CARINA/name wordmark per output with no graphic symbol.
+   - Judge readability, name recognition, spacing, terminals and licensing independently.
+
+6. **Separate proof gates**
    - Test unprompted readings, category similarity and 16-48 px behavior.
+   - Score symbols without the name and wordmarks without a supporting icon.
    - Reject familiar-object sinks before downstream generation.
+   - Include a separate monochrome reduction; do not replace the primary color
+     candidate with the reduction.
 
-5. **Human selection gate**
-   - Approve one family or return to the operation branches.
+7. **Human selection gates**
+   - Approve one symbol and one wordmark independently or return to their branches.
    - No Hero, social, app icon or materialized mark may start before this gate.
 
-6. **Production-clean mark and wordmark**
-   - Simplify the seed for legibility and vectorization.
-   - Strengthen silhouette and small-size behavior.
+8. **Deterministic lockup composition**
+   - Clean/vectorize each approved master independently.
+   - Compose, do not regenerate, the symbol and wordmark.
+   - Tune scale, baseline, clear space and optical gap without changing either design.
+   - Resolve into standalone symbol, standalone wordmark, primary combination lockup, horizontal/vertical arrangements,
+     monochrome/reverse variants, and a simplified micro mark.
 
-7. **App icon variants**
+9. **App icon variants**
    - Classic, soft/lifestyle, technical/high-contrast, monochrome glyph.
    - Preserve the approved mark; vary only material and environment.
 
-8. **Proof sheets**
+10. **Proof sheets**
    - Small-size legibility, light/dark backgrounds, icon family contact sheet.
 
-9. **Backgrounds and scenes**
+11. **Backgrounds and scenes**
    - Hero, social, onboarding, documentation.
    - Use the same approved mark/material references; do not let backgrounds invent new logos.
 

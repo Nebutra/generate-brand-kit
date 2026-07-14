@@ -191,35 +191,51 @@ def vi_template(brand: str, philosophy: str) -> str:
 
 
 def dag_template(brand: str) -> str:
-    return f"""# {brand} mark exploration DAG
+    return f"""# {brand} independent symbol and wordmark exploration DAG
 
 tasks:
-  - id: operation-family-1
-    name: 01-operation-family-1
-    ratio: "16:9"
+  - id: symbol-family-1
+    name: 01-symbol-family-1
+    ratio: "1:1"
     prompt: >-
-      Create a black-and-white identity family study for {brand}. Start from
-      one explicit business tension and one formal operation. Apply the same
-      invariant to a wordmark, symbol, layout motif, and motion keyframes.
-      Avoid literal pictograms, color, material, effects, and mockups.
+      Create exactly one isolated graphic symbol for {brand} in its intended
+      brand palette. Start from one explicit business tension and one formal
+      operation. No wordmark, letters, brand name, board, variants or mockup.
 
-  - id: operation-family-2
-    name: 02-operation-family-2
-    ratio: "16:9"
+  - id: symbol-family-2
+    name: 02-symbol-family-2
+    ratio: "1:1"
     prompt: >-
-      Create a second structurally distinct black-and-white identity family for
-      {brand}, governed by a different formal operation. Include wordmark,
-      symbol, layout motif, and motion keyframes. No cosmetic variation of the
-      first family, no literal pictogram, color, material, effects, or mockup.
+      Create exactly one second structurally distinct graphic symbol for
+      {brand}, governed by a different formal operation. No wordmark, letters,
+      brand name, board, variants or mockup.
 
-  - id: operation-family-3
-    name: 03-operation-family-3
-    ratio: "16:9"
+  - id: symbol-family-3
+    name: 03-symbol-family-3
+    ratio: "1:1"
     prompt: >-
-      Create a third structurally distinct black-and-white identity family for
-      {brand}, governed by another formal operation. Include wordmark, symbol,
-      layout motif, and motion keyframes. No random logo grid, literal pictogram,
-      color, material, effects, or mockup.
+      Create exactly one third structurally distinct graphic symbol for
+      {brand}, governed by another formal operation. No wordmark, letters,
+      brand name, board, variants or mockup.
+
+  - id: wordmark-family-1
+    name: 04-wordmark-family-1
+    ratio: "3:2"
+    prompt: >-
+      Create exactly one typographic wordmark reading {brand}. Use one declared
+      typography strategy and one restrained distinctive terminal or counter
+      rule. No graphic symbol, icon, monogram, board, variants or extra text.
+
+  - id: wordmark-family-2
+    name: 05-wordmark-family-2
+    ratio: "3:2"
+    prompt: >-
+      Create exactly one second structurally distinct typographic wordmark
+      reading {brand}. Keep every letter immediately readable. No graphic
+      symbol, icon, monogram, board, variants or extra text.
+
+  # Compose approved symbol + approved wordmark deterministically after both
+  # human gates. Do not add a combined image-generation task here.
 """
 
 
