@@ -1,4 +1,4 @@
 interface:
   display_name: "Generate Brand VI"
-  short_description: "Create modular VI systems and production assets"
-  default_prompt: "Use $generate-brand-vi to select the relevant VI modules, create their production assets, and verify every item and specialist handoff."
+  short_description: "Scope, compile, produce, and verify modular Brand VI"
+  default_prompt: "Use $generate-brand-vi to define item-level scope, compile approval-gated production DAGs, integrate approved assets, and verify the complete Brand VI."

@@ -2,11 +2,17 @@
 
 Use this as a scoping matrix, not a mandate to produce every row. Mark each item `required`, `optional`, `not applicable`, or `external handoff`.
 
+## Contents
+
+Selection; strategy and verbal identity; core VI; digital, physical, campaign,
+product, AI SaaS, motion, governance, and delivery surfaces.
+
 ## Selection Model
 
 - Use `vi-deliverables.json` as the canonical item-level A1-B13 catalog.
-- Start from a scene profile only to reduce setup work, then compose the actual module set.
+- Start from a scene profile only to seed optional candidates, then record the actual item-level decisions in `brand-vi-scope.json`.
 - A profile is not a package tier and does not imply that unselected modules are lower value.
+- Do not infer that every child of a selected module is required. Use stable IDs such as `b2-05` and item-level route overrides for materially different producers, outputs, gates, or acceptance tests.
 - Keep strategy, verbal identity, rights, governance, source ownership, and validation as cross-system requirements.
 
 ## Strategy and Verbal Identity
@@ -26,6 +32,7 @@ Use this as a scoping matrix, not a mandate to produce every row. Mark each item
 - grid, spacing, alignment, composition, shape grammar, illustration, photography, texture, iconography, and data-visualization direction
 - produce separate short-name/full-name Chinese, English, and bilingual construction sheets when A2 is selected
 - produce explicit vertical/horizontal lockup sheets, color-misuse sheets, auxiliary-graphic crop/scale/density rules, and coordinate/grid construction where A1-A5 require them
+- when A6 is selected, keep canonical symbol, wordmark, skin masters, lockups, applications, and mockups as separate asset classes; define family usage, responsive behavior, version governance, and static fallbacks
 
 ## Digital Product and Runtime
 

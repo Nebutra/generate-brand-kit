@@ -1,0 +1,80 @@
+# Compiled by compile_brand_image_dag.py. Do not hand-edit sibling prompts.
+tasks:
+  - id: "symbol-production-master"
+    name: "symbol-production-master"
+    ratio: "1:1"
+    refs:
+      - "approved/core-mark.png"
+    prompt: |-
+      TASK
+      Create the production-clean raster master for the approved generate-brand-vi symbol.
+
+      STRATEGY
+      Preserve the approved identity; this is cleanup, not redesign.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels; preserve exact silhouette, counterforms, proportion, posture, and orientation
+
+      REFERENCE AUTHORITY
+      Reference 1 is the approved canonical symbol and controls all geometry.
+
+      ONE VARIATION MECHANISM
+      Remove generation debris and normalize only edge clarity.
+
+      OUTPUT AND SCENE
+      One centered flat symbol on transparent or pure white 1:1 as specified; no wordmark or surrounding layout.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "application-readme-hero"
+    name: "application-readme-hero"
+    ratio: "2:1"
+    refs:
+      - "@symbol-production-master"
+    prompt: |-
+      TASK
+      Create one production application for generate-brand-vi: README hero background.
+
+      STRATEGY
+      A calm repository header with a safe area for real HTML text and badges.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels; preserve every referenced identity master without redrawing
+
+      REFERENCE AUTHORITY
+      Reference 1 is the approved symbol and controls exact visible identity geometry.
+
+      ONE VARIATION MECHANISM
+      Use the approved modular parts as a restrained assembly sequence on the right third.
+
+      OUTPUT AND SCENE
+      Flat print-craft composition, graphite field, paper and two accents, right-third activity, quiet left two-thirds, no generated text.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "application-social-preview"
+    name: "application-social-preview"
+    ratio: "2:1"
+    refs:
+      - "@symbol-production-master"
+    prompt: |-
+      TASK
+      Create one production application for generate-brand-vi: repository social preview background.
+
+      STRATEGY
+      A legible repository preview that preserves a quiet copy area.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels; preserve every referenced identity master without redrawing
+
+      REFERENCE AUTHORITY
+      Reference 1 is the approved symbol and controls exact visible identity geometry.
+
+      ONE VARIATION MECHANISM
+      Use one approved mark and a sparse subset of its modular parts.
+
+      OUTPUT AND SCENE
+      Flat 2:1 composition, mark center-left, controlled negative space, no generated text, no alternative logo.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation

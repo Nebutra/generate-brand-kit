@@ -28,10 +28,13 @@ full paper trail is committed:
 | Artifact | File |
 | --- | --- |
 | Visual identity rules | [`resources/brand/visual-identity.md`](resources/brand/visual-identity.md) |
-| Generation DAG (runnable spec) | [`resources/brand/brand-vi-generation-dag.yaml`](resources/brand/brand-vi-generation-dag.yaml) |
+| Prompt source | [`resources/brand/brand-image-spec.json`](resources/brand/brand-image-spec.json) |
+| Exploration DAG | [`resources/brand/brand-vi-exploration-dag.yaml`](resources/brand/brand-vi-exploration-dag.yaml) |
+| Post-approval production DAG | [`resources/brand/brand-vi-production-dag.yaml`](resources/brand/brand-vi-production-dag.yaml) |
 | Approved raster masters | [`resources/brand/approved/`](resources/brand/approved/) |
-| Hand-vectorized production logo | [`resources/brand/processed/logo.svg`](resources/brand/processed/logo.svg) |
+| Verified production logo | [`resources/brand/processed/logo.svg`](resources/brand/processed/logo.svg) |
 | Asset inventory & consumption map | [`resources/brand/brand-vi-inventory.md`](resources/brand/brand-vi-inventory.md) |
+| Checksums, dependencies and QA | [`resources/brand/brand-asset-manifest.json`](resources/brand/brand-asset-manifest.json) |
 
 That is the whole pitch: not "generate a logo," but leave behind a **brand
 system another agent can pick up and extend** — documented decisions,
@@ -47,21 +50,24 @@ Asking an agent to "make me a logo" produces a one-off image and a mess:
 - ❌ the visible logo replaced while compiled icons, favicons, and docs stay stale
 
 This skill makes the agent behave like a brand engineer instead. It uses a
-composable A1-B13 traditional VI and C1-C14 AI SaaS catalog: scene profiles provide a starting set,
+composable A1-A6 foundations, B1-B13 traditional applications, and C1-C14 AI SaaS catalog: scene profiles provide a starting set,
 then modules are added or removed to match the organization's real surfaces.
 
 1. **Read the existing system first** — asset folders, icon build scripts, docs.
 2. **Inventory every asset slot** the product actually consumes.
 3. **Harden philosophy into VI rules** — shape grammar, palette, negative constraints.
-4. **Design a serial generation DAG** so consistency comes from references, not adjectives.
-5. **Generate → judge → promote** into `approved/`; quarantine rejects.
-6. **Convert to production formats** — hand-vectorized SVG, platform icon sizes.
-7. **Integrate and verify** — configs, components, docs, legacy scans.
+4. **Compile parallel exploration DAGs** — one symbol or one wordmark per image.
+5. **Judge at a human gate** before any candidate gets descendants.
+6. **Compile post-approval production DAGs** from canonical references.
+7. **Convert and verify production formats** — SVG, platform icons, fonts, templates.
+8. **Integrate and reconcile** — product consumers, manifest, checksums, legacy scans.
 
-> The identity is abstracted from the business scenario itself: a brand kit
+> This repository's own identity is abstracted from its business scenario: a brand kit
 > is literally a **kit** — standardized parts that assemble into one
 > consistent identity across every surface. The logo is that story in one
 > mark: four distinct geometric parts, the last tile snapping into place.
+> This self-brand story is not a concept template for client work; client IP must
+> be derived independently from that product's buyer and business scenario.
 
 ## Install
 
@@ -71,8 +77,13 @@ then modules are added or removed to match the organization's real surfaces.
 git clone https://github.com/Nebutra/generate-brand-vi.git ~/.claude/skills/generate-brand-vi
 ```
 
-**Codex**: clone into your skills path; the interface metadata lives in
-[`agents/openai.yaml`](agents/openai.yaml).
+**Codex**:
+
+```bash
+git clone https://github.com/Nebutra/generate-brand-vi.git ~/.codex/skills/generate-brand-vi
+```
+
+The interface metadata lives in [`agents/openai.yaml`](agents/openai.yaml).
 
 ### Built-in image-generation backend
 
@@ -110,16 +121,19 @@ Or seed the structure by hand first:
 # inventory existing brand surfaces (old-brand migration)
 python3 scripts/scan_brand_assets.py . --brand-term oldname --brand-term newname
 
-# scaffold VI, item-level production plan, inventory, and mark exploration DAG
+# scaffold an optional profile, then make item decisions explicitly
 python3 scripts/create_brand_vi_scaffold.py --brand MyProduct \
   --philosophy "one line that the whole identity must express" \
-  --profile industrial \
-  --include-module b13 \
-  --exclude-module b3
+  --profile ai-saas \
+  --require-item a1-01 \
+  --require-item b2-05 \
+  --require-item c1-04 \
+  --external-handoff-item c14-05
 ```
 
-For an AI SaaS product, start with `--profile ai-saas` and remove modules the
-actual product does not consume.
+Profiles seed optional item candidates; they do not silently require every child
+of a module. For larger scopes, edit `brand-vi-scope.json`, then compile only the
+plan/inventory/manifest layer with `python3 scripts/compile_brand_vi_scope.py --repo . --force`.
 
 The agent fills the templates, runs the DAG with whatever image-generation
 tool is available, and promotes only approved masters into product paths.
@@ -134,19 +148,22 @@ external-handoff brief instead of claiming professional approval.
 
 ```mermaid
 graph TD
-    A[Brand philosophy<br/>one line of intent] --> B[visual-identity.md<br/>shape grammar · palette · negative constraints]
-    B --> C[brand-vi-generation-dag.yaml]
-    C --> D[01 material board]
-    D --> E[02 core mark seed]
-    E --> F[03 production-clean mark]
-    F --> G[04 hero background]
-    F --> H[05 social preview]
-    F --> I[hand-vectorized logo.svg]
-    G & H & I --> J[processed/ → README · app icons · social slots]
+    A[Strategy evidence + operations] --> B[brand-image-spec.json]
+    B --> C1[3+ isolated symbol directions]
+    B --> C2[3+ isolated wordmark directions]
+    C1 & C2 --> D[Collision review + human approval]
+    D --> E1[Approved symbol]
+    D --> E2[Approved wordmark]
+    E1 & E2 --> F[Post-approval compiler]
+    F --> G[Clean masters + lockups]
+    G --> H1[Skins and applications]
+    G --> H2[SVG/icons/fonts/templates]
+    H1 & H2 --> I[Manifest + product consumption + QA]
 ```
 
-Consistency is structural: every downstream image references the approved
-upstream master, so the mark cannot drift.
+Consistency is structural: exploration branches before convergence, then every
+downstream asset references a human-approved canonical master. Compilation
+reports freeze prompt and reference hashes.
 
 ## What's inside
 
@@ -155,15 +172,25 @@ SKILL.md                     # the skill contract agents load
 references/
   workflow.md                # decision gates, "water-shape" interpretation
   asset-taxonomy.md          # every slot a product consumes, with sizes
-  generation-dag.md          # serial-consistency DAG patterns
+  generation-dag.md          # branch/gate/anchor/selective-rerun DAG patterns
   prompt-patterns.md         # prompt architecture + anti-slop constraints
   validation.md              # QA, integration, legacy-cleanup checks
+  production-contract.md     # item-level completion and gate semantics
+  production-routing.json    # module defaults + item overrides
+  vi-deliverables.json       # A1-A6, B1-B13, C1-C14 catalog
+  brand-asset-manifest.schema.json
+  consumer-integration.md    # canonical package and repo consumption
   trends-2026.md             # rising/falling VI aesthetics, trend trackers
   design-theory.md           # strategy frameworks, DBA science, craft tests
   inspiration-sources.md     # stage-mapped galleries + brand-as-code ecosystem
 scripts/
   scan_brand_assets.py       # inventory brand files & text hits in any repo
   create_brand_vi_scaffold.py   # neutral approved/generated/processed scaffold
+  compile_brand_vi_scope.py     # safely compile edited item-level scope
+  compile_brand_image_dag.py    # stable prompt + reference compiler
+  validate_brand_asset_manifest.py
+  update_brand_asset_state.py   # state, checksum, plan sync, invalidation
+subskills/extend-wordmark-font/ # wordmark-derived A-Z/a-z production workflow
 resources/brand/             # this repo's own kit — a live worked example
 ```
 
@@ -173,6 +200,8 @@ resources/brand/             # this repo's own kit — a live worked example
 - Never ship a one-off raster where the product needs real vectors.
 - Never replace the visible logo while compiled assets stay stale.
 - Never import a landing-page aesthetic into operational software uninvited.
+- Never count a valid API response as an accepted asset.
+- Never treat an empty manifest or non-terminal plan as a delivered VI.
 
 ## Show your kit
 

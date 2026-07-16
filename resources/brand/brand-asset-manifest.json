@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "brand": "generate-brand-vi",
+  "dag": "brand-vi-production-dag.yaml",
+  "assets": [
+    {
+      "id": "canonical-symbol",
+      "name": "Approved canonical symbol",
+      "role": "deliverable",
+      "assetClass": "symbol-master",
+      "status": "complete",
+      "source": "human-approved self-brand exploration",
+      "owner": "Nebutra",
+      "license": "repository-owned brand asset",
+      "dependencies": [],
+      "output": {
+        "path": "approved/core-mark.png",
+        "mediaType": "image/png",
+        "width": 1254,
+        "height": 1254,
+        "aspectRatio": "1:1",
+        "bytes": 827105,
+        "sha256": "07b3701fca52ef3e4767e68b4aa9c4cc35cc3bb542b0830655b7464183ddf197"
+      },
+      "validation": {
+        "reviewed": true,
+        "checks": ["human-approval", "small-size", "collision-review"]
+      },
+      "usage": ["README identity", "production derivative source"]
+    },
+    {
+      "id": "production-symbol-svg",
+      "name": "Production symbol SVG",
+      "role": "derivative",
+      "assetClass": "symbol-vector",
+      "status": "complete",
+      "source": "approved/core-mark.png",
+      "owner": "Nebutra",
+      "license": "repository-owned brand asset",
+      "dependencies": ["canonical-symbol"],
+      "derivation": {
+        "method": "verified manual vector reconstruction",
+        "sourceAsset": "canonical-symbol"
+      },
+      "output": {
+        "path": "processed/logo.svg",
+        "mediaType": "image/svg+xml",
+        "bytes": 875,
+        "sha256": "6d0860aa6cf745767f0329a710d5d818f0485dd2ad2cec319f0cfafadf296833"
+      },
+      "validation": {
+        "reviewed": true,
+        "checks": ["svg-structure", "source-fidelity"]
+      },
+      "usage": ["README logo"]
+    },
+    {
+      "id": "readme-hero",
+      "name": "README hero",
+      "role": "derivative",
+      "assetClass": "hero-background",
+      "status": "complete",
+      "source": "approved canonical symbol and repository production art direction",
+      "owner": "Nebutra",
+      "license": "repository-owned brand asset",
+      "dependencies": ["canonical-symbol"],
+      "output": {
+        "path": "processed/hero.png",
+        "mediaType": "image/png",
+        "width": 1774,
+        "height": 887,
+        "aspectRatio": "2:1",
+        "bytes": 1635067,
+        "sha256": "da7dbd27df1fd98f3291cd9c4768aa38fc3b7867c7b90188b34ddd76d19aa2c1"
+      },
+      "validation": {
+        "reviewed": true,
+        "checks": ["safe-area", "identity-fidelity", "readme-context"]
+      },
+      "usage": ["README header"]
+    },
+    {
+      "id": "social-preview",
+      "name": "Repository social preview",
+      "role": "derivative",
+      "assetClass": "social-preview",
+      "status": "complete",
+      "source": "approved canonical symbol and README hero visual language",
+      "owner": "Nebutra",
+      "license": "repository-owned brand asset",
+      "dependencies": ["canonical-symbol", "readme-hero"],
+      "output": {
+        "path": "processed/social-preview.png",
+        "mediaType": "image/png",
+        "width": 1280,
+        "height": 640,
+        "aspectRatio": "2:1",
+        "bytes": 915800,
+        "sha256": "707a7918983b13bd48b5b0ed6202e80b7392923b314f521b3f6acf21d93b88df"
+      },
+      "validation": {
+        "reviewed": true,
+        "checks": ["identity-fidelity", "social-crop"]
+      },
+      "usage": ["GitHub social preview"]
+    }
+  ]
+}

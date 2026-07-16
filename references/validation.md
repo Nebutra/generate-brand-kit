@@ -1,5 +1,10 @@
 # Validation and Cleanup
 
+## Contents
+
+File, repository, visual, family, asset-class, selected-kit, AI SaaS, and commit
+hygiene checks.
+
 ## File Checks
 
 - Use `file` to confirm raster dimensions and alpha/RGB mode.
@@ -36,6 +41,50 @@ Do not delete code-level compatibility uses of `legacy` or third-party import na
 - Verify that the selected formal operation extends coherently into wordmark,
   layout and motion. Reject one-off symbolic tricks.
 
+## Generated-Family Checks
+
+- Treat provider success as `generated`, not `accepted`; inspect every formal
+  master before promotion.
+- Verify identity invariants across the family: silhouette, counterform,
+  proportion, orientation, and minimum-size reading.
+- Verify shared family invariants: camera, scale, safe area, background,
+  lighting, material depth, or texture density as applicable.
+- Verify sibling differentiation. Each accepted sibling needs one visually
+  evident mechanism, not a cosmetic color, gloss, or noise change.
+- Compare siblings together only after the underlying symbol or wordmark has
+  been approved. Keep symbol, wordmark, lockup, application, and mockup reviews
+  separate so one weak generator task cannot corrupt every asset class.
+- Use automated similarity metrics only as review signals. Do not hard-code a
+  universal CLIP/DINO threshold as an aesthetic approval rule.
+
+## Asset-Class Structure Checks
+
+- Define native ratio and dimensions per asset class before generation.
+- Require homogeneous dimensions where a class promises interchangeable
+  masters; verify actual PNG headers rather than filenames.
+- Regenerate a master created for the wrong composition or ratio. Do not crop,
+  stretch, or pad it merely to satisfy a file-size check.
+- Cap retries and record a named blocker when the producer repeatedly misses a
+  structural constraint.
+- Validate the final manifest with:
+
+```bash
+python3 scripts/validate_brand_asset_manifest.py \
+  /path/to/project/brand-asset-manifest.json \
+  --root /path/to/project \
+  --plan /path/to/project/brand-vi-production-plan.json \
+  --production-complete
+```
+
+Do not use `--allow-empty` outside a pre-scope draft. Structural validity does
+not mean production completion; completion requires item reconciliation,
+terminal required work, accepted evidence, byte size, and SHA-256 checks.
+
+Use `scripts/update_brand_asset_state.py` rather than editing accepted state by
+hand. After a canonical checksum changes, confirm every declared descendant is
+`invalidated`, its stale manifest output is cleared, and its old product file is
+quarantined before selective regeneration.
+
 ## Selected-Kit Checks
 
 - Confirm logo guidelines include clear space, minimum size, background behavior, co-branding where relevant, and misuse examples.
@@ -53,6 +102,9 @@ Do not delete code-level compatibility uses of `legacy` or third-party import na
 - For mascot/IP systems, verify turnaround consistency, silhouette recognition, monochrome behavior, pose/expression consistency, 3D handoff assumptions and static motion fallbacks.
 
 ## AI SaaS Checks
+
+Use `ai-saas-acceptance.md` for group-specific evidence and end-to-end flow
+tests; the checks below are the minimum cross-system battery.
 
 - Confirm AI-generated, AI-assisted and AI-executed states have distinct labels and are not communicated by sparkle decoration alone.
 - Exercise idle, understanding, planning, streaming, tool use, approval, cancel, retry, partial-success, refusal, timeout and recovery states.

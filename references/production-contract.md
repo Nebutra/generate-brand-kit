@@ -15,9 +15,25 @@ complete only when every selected deliverable is one of:
 
 Never report a small exploratory batch as the delivered VI.
 
+## Artifact roles
+
+Record every generated or consumed asset with one role:
+
+- `deliverable`: an approved master or user-facing source artifact;
+- `derivative`: a production export derived from an approved master;
+- `dependency`: a canonical input, family anchor, calibration board, or other
+  upstream consistency reference;
+- `exploration`: an unapproved candidate;
+- `evidence`: a proof sheet, QA capture, or acceptance record.
+
+Only `deliverable` and `derivative` assets count toward delivered scope.
+Generation success does not change a role or acceptance status automatically.
+
 ## Execution model
 
-1. Compile selected modules into `brand-vi-production-plan.json`.
+1. Compile selected modules into `brand-vi-production-plan.json`. A profile seeds
+   optional item candidates; `brand-vi-scope.json` is the authoritative
+   item-level requirement map.
 2. Produce strategy and foundations first.
 3. Run mark families in parallel and stop only the mark-dependent branch at
    `mark-approved`.
@@ -26,6 +42,15 @@ Never report a small exploratory batch as the delivered VI.
 5. Resume dependent applications after mark approval without rebuilding
    completed independent work.
 6. Finish with an item-level status and acceptance report.
+7. Emit `brand-asset-manifest.json` conforming to
+   `references/brand-asset-manifest.schema.json`, then run
+   `scripts/validate_brand_asset_manifest.py`.
+8. Reconcile the manifest with the plan using `--production-complete`; structural
+   manifest validity alone is not a completion signal.
+
+Use `scripts/update_brand_asset_state.py` for state transitions. A changed
+accepted/complete canonical checksum invalidates all declared descendants and
+clears their stale output/review metadata; unrelated branches remain untouched.
 
 ## Gate semantics
 

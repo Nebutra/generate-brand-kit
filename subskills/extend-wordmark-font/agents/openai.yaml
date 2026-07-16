@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extend Wordmark Font"
+  short_description: "Expand an approved wordmark into a coherent font set"
+  default_prompt: "Use $extend-wordmark-font to derive a coherent A-Z and a-z font set from my approved wordmark references."

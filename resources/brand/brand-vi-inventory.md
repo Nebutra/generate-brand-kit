@@ -21,16 +21,17 @@ GitHub repo page. No app icons, favicons, or mobile slots apply.
 
 | Slot | Target Path | Format | Required Size | Source | Status |
 | --- | --- | --- | --- | --- | --- |
-| Primary logo mark | `resources/brand/processed/logo.svg` | SVG | scalable, legible at 32 px | hand-vectorized from `approved/core-mark.png` | done |
-| README hero banner | `resources/brand/processed/hero.png` | PNG | ~1568×672 (21:9) | `generated/` → approved | done |
-| Social preview / OG card | `resources/brand/processed/social-preview.png` | PNG | 1280×640 | derived from hero master | done |
-| Raster mark master | `resources/brand/approved/core-mark.png` | PNG | 1024×1024 | generation DAG | done |
+| Primary logo mark | `resources/brand/processed/logo.svg` | SVG | scalable, legible at 32 px | verified vector derivative of `approved/core-mark.png` | done |
+| README hero banner | `resources/brand/processed/hero.png` | PNG | 1774×887 (2:1) | approved mark → production DAG | done |
+| Social preview / OG card | `resources/brand/processed/social-preview.png` | PNG | 1280×640 (2:1) | approved mark + hero language | done |
+| Raster mark master | `resources/brand/approved/core-mark.png` | PNG | 1254×1254 | human-approved canonical | done |
 
 ## Consumption Map
 
 - `README.md` header → `processed/logo.svg`
 - `README.md` hero → `processed/hero.png`
 - GitHub repo Settings → Social preview → upload `processed/social-preview.png` (manual, GitHub has no file-based slot)
+- `brand-asset-manifest.json` → dependency, checksum, dimensions, validation and usage source of truth
 
 ## Migration Notes
 

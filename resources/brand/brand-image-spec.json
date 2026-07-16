@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "brand": "generate-brand-vi",
+  "philosophy": "A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.",
+  "invariants": [
+    "modular construction governed by one repeatable operation",
+    "one recognizable silhouette and one distinctive interruption",
+    "flat geometry remains legible in black and white at 32 pixels"
+  ],
+  "negativeConstraints": [
+    "no Microsoft four-pane flag reading",
+    "no droplet, crystal, sparkle, magic wand, or generic AI symbol",
+    "no decorative material used to rescue weak geometry"
+  ],
+  "explorationReferences": {
+    "symbol": [],
+    "wordmark": []
+  },
+  "symbolDirections": [
+    {
+      "id": "assembly-gap",
+      "tension": "independent brand assets versus one governed system",
+      "operation": "one controlled assembly gap",
+      "distinctiveRule": "different modular parts resolve into one silhouette while one join remains visibly in progress"
+    },
+    {
+      "id": "shared-register",
+      "tension": "creative variation versus production consistency",
+      "operation": "one shared registration axis",
+      "distinctiveRule": "heterogeneous parts align to one production register without becoming identical tiles"
+    },
+    {
+      "id": "nested-boundary",
+      "tension": "open composition versus controlled asset boundary",
+      "operation": "one nested boundary interruption",
+      "distinctiveRule": "an outer system contains distinct parts while a single opening signals extensibility"
+    }
+  ],
+  "wordmarkDirections": [
+    {
+      "id": "registered-terminal",
+      "tension": "engineering precision versus approachable creative work",
+      "operation": "one registered terminal cut",
+      "distinctiveRule": "selected terminals share one cut angle without reducing readability"
+    },
+    {
+      "id": "modular-counter",
+      "tension": "individual modules versus shared identity",
+      "operation": "one modular counterform rule",
+      "distinctiveRule": "counters repeat a parts grammar while exact spelling remains primary"
+    },
+    {
+      "id": "assembly-rhythm",
+      "tension": "serial production versus composable selection",
+      "operation": "one controlled spacing interruption",
+      "distinctiveRule": "one repeatable spacing event creates recognition without fragmenting the name"
+    }
+  ],
+  "skinFamilies": [],
+  "productionApplications": [
+    {
+      "id": "readme-hero",
+      "name": "README hero background",
+      "assetClass": "hero-background",
+      "ratio": "2:1",
+      "references": ["symbol"],
+      "usage": "A calm repository header with a safe area for real HTML text and badges.",
+      "mechanism": "Use the approved modular parts as a restrained assembly sequence on the right third.",
+      "scene": "Flat print-craft composition, graphite field, paper and two accents, right-third activity, quiet left two-thirds, no generated text."
+    },
+    {
+      "id": "social-preview",
+      "name": "repository social preview background",
+      "assetClass": "social-preview",
+      "ratio": "2:1",
+      "references": ["symbol"],
+      "usage": "A legible repository preview that preserves a quiet copy area.",
+      "mechanism": "Use one approved mark and a sparse subset of its modular parts.",
+      "scene": "Flat 2:1 composition, mark center-left, controlled negative space, no generated text, no alternative logo."
+    }
+  ]
+}

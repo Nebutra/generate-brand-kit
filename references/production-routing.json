@@ -1,10 +1,11 @@
 {
   "routes": {
-    "a1": {"phase": "mark-development", "producer": "identity-design", "gate": "strategy-approved", "output": "vector+guidelines", "creates_gate": "mark-approved"},
+    "a1": {"phase": "mark-guidelines", "producer": "identity-guidelines", "gate": "mark-approved", "output": "editable-guidelines+proof"},
     "a2": {"phase": "foundations", "producer": "typography-layout", "gate": "strategy-approved", "output": "editable-guidelines"},
     "a3": {"phase": "foundations", "producer": "color-token", "gate": "strategy-approved", "output": "guidelines+tokens"},
     "a4": {"phase": "dependent-applications", "producer": "identity-layout", "gate": "mark-approved", "output": "vector+guidelines"},
     "a5": {"phase": "foundations", "producer": "graphic-system", "gate": "strategy-approved", "output": "vector+guidelines"},
+    "a6": {"phase": "dependent-applications", "producer": "identity-variant-system", "gate": "mark-approved", "output": "approved-masters+guidelines+manifest"},
     "b1": {"phase": "dependent-applications", "producer": "document-layout", "gate": "mark-approved", "output": "editable-template+export"},
     "b2": {"phase": "dependent-applications", "producer": "digital-asset", "gate": "mark-approved", "output": "source+platform-exports"},
     "b3": {"phase": "specialist-applications", "producer": "packaging-artwork", "gate": "mark-approved+production-inputs", "output": "artwork+handoff"},
@@ -32,5 +33,23 @@
     "c12": {"phase": "independent-product-systems", "producer": "accessibility-spec", "gate": "strategy-approved", "output": "requirements+test-matrix"},
     "c13": {"phase": "independent-product-systems", "producer": "ecosystem-architecture", "gate": "strategy-approved", "output": "identity-rules+components"},
     "c14": {"phase": "independent-product-systems", "producer": "motion-sonic-system", "gate": "strategy-approved", "output": "motion-spec+audio-handoff"}
+  },
+  "item_overrides": {
+    "a1-01": {"phase": "mark-development", "producer": "identity-design", "gate": "strategy-approved", "output": "vector-master+raster-proofs", "creates_gate": "mark-approved"},
+    "b2-03": {"producer": "email-template", "output": "editable-html+rendered-proof"},
+    "b2-04": {"producer": "qr-system", "output": "vector+destination-record+scan-report"},
+    "b2-05": {"producer": "platform-icon", "output": "vector-source+platform-exports+context-proofs"},
+    "b2-06": {"phase": "specialist-applications", "producer": "print-layout", "gate": "mark-approved+production-inputs", "output": "artwork+supplier-handoff"},
+    "b2-07": {"producer": "campaign-layout", "output": "editable-template+export"},
+    "c1-02": {"producer": "color-token", "output": "guidelines+semantic-tokens+contrast-report"},
+    "c1-04": {"producer": "design-token", "output": "dtcg-tokens+code-mapping+parity-report"},
+    "c1-05": {"producer": "component-library", "output": "components+state-matrix+visual-proofs"},
+    "c1-06": {"producer": "theme-system", "output": "theme-tokens+high-contrast-proofs"},
+    "c1-07": {"producer": "data-visualization", "output": "chart-spec+tokens+accessibility-proofs"},
+    "c1-09": {"producer": "token-bridge", "output": "figma-code-map+drift-check"},
+    "c3-07": {"producer": "state-token-map", "output": "state-matrix+tokens+copy+motion-audio-map"},
+    "c8-04": {"producer": "credential-ux", "output": "interaction-spec+redaction-tests"},
+    "c10-03": {"producer": "trust-evidence", "gate": "evidence-available", "output": "evidence-register+approved-claims"},
+    "c14-05": {"producer": "sonic-handoff", "output": "audio-spec+rights-register+static-fallback"}
   }
 }

@@ -3,6 +3,15 @@
 Durable theory that outlives trends. Use during VI distillation and when
 judging generated candidates.
 
+Apply `research-evidence.md` when citing these frameworks. Books, original
+authors, standards, and direct interviews are canonical; linked blogs are
+accessible summaries, not proof that a method is universal consensus.
+
+## Contents
+
+Strategy; distinctive brand assets; craft criteria; form derivation; family
+exploration; verification battery; verbal identity; canon.
+
 ## Strategy before marks
 
 - **Derive the brand IP from the business scenario, not from incidental

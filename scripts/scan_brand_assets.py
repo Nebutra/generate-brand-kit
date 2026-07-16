@@ -73,8 +73,8 @@ BRAND_HINT_RE = re.compile(
 
 def png_dimensions(path: Path) -> dict[str, int] | None:
     try:
-      with path.open("rb") as handle:
-          header = handle.read(24)
+        with path.open("rb") as handle:
+            header = handle.read(24)
     except OSError:
         return None
     if len(header) >= 24 and header.startswith(b"\x89PNG\r\n\x1a\n"):
@@ -126,7 +126,9 @@ def collect_assets(root: Path) -> list[dict[str, Any]]:
 def collect_text_hits(root: Path, terms: list[str]) -> list[dict[str, Any]]:
     if not terms:
         return []
-    patterns = [(term, re.compile(re.escape(term), re.IGNORECASE)) for term in terms if term]
+    patterns = [
+        (term, re.compile(re.escape(term), re.IGNORECASE)) for term in terms if term
+    ]
     hits: list[dict[str, Any]] = []
     for path in iter_files(root):
         if path.suffix.lower() not in TEXT_SUFFIXES:
@@ -151,9 +153,15 @@ def main() -> int:
         default=[],
         help="Brand or legacy term to search for; can be repeated",
     )
-    parser.add_argument("--max-assets", type=int, default=300, help="Maximum asset rows to print")
-    parser.add_argument("--max-text-hits", type=int, default=300, help="Maximum text hit rows to print")
-    parser.add_argument("--pretty", action="store_true", help="Pretty-print JSON output")
+    parser.add_argument(
+        "--max-assets", type=int, default=300, help="Maximum asset rows to print"
+    )
+    parser.add_argument(
+        "--max-text-hits", type=int, default=300, help="Maximum text hit rows to print"
+    )
+    parser.add_argument(
+        "--pretty", action="store_true", help="Pretty-print JSON output"
+    )
     args = parser.parse_args()
 
     root = Path(args.repo).expanduser().resolve()

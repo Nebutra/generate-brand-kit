@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import os
 import shutil
 import subprocess
@@ -29,7 +31,9 @@ def candidate_backends() -> list[Path]:
 
 def resolve_backend() -> Path:
     for candidate in candidate_backends():
-        if (candidate / "pyproject.toml").is_file() and (candidate / "src/generate_image").is_dir():
+        if (candidate / "pyproject.toml").is_file() and (
+            candidate / "src/generate_image"
+        ).is_dir():
             return candidate.resolve()
     searched = "\n  - ".join(str(path) for path in candidate_backends())
     raise SystemExit(
@@ -40,16 +44,22 @@ def resolve_backend() -> Path:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo", default=".", help="Repository containing the brand kit")
+    parser.add_argument(
+        "--repo", default=".", help="Repository containing the brand kit"
+    )
     parser.add_argument(
         "--dag-file",
-        default="resources/brand/brand-vi-generation-dag.yaml",
+        default="resources/brand/brand-vi-exploration-dag.yaml",
         help="DAG path relative to --repo, or an absolute path",
     )
     parser.add_argument(
         "--output-dir",
         default="resources/brand/generated",
         help="Output directory relative to --repo, or an absolute path",
+    )
+    parser.add_argument(
+        "--report-file",
+        help="Compilation report path; defaults beside the DAG",
     )
     parser.add_argument("--provider", default="mox", help="generate-image provider")
     parser.add_argument("--concurrency", type=int, default=4)
@@ -59,7 +69,9 @@ def main() -> int:
         action="store_true",
         help="Make real billed API calls; without this flag only a dry-run is performed",
     )
-    parser.add_argument("--json", action="store_true", help="Request machine-readable output")
+    parser.add_argument(
+        "--json", action="store_true", help="Request machine-readable output"
+    )
     args = parser.parse_args()
 
     if shutil.which("uv") is None:
@@ -72,6 +84,25 @@ def main() -> int:
     output = output if output.is_absolute() else repo / output
     if not dag.is_file():
         raise SystemExit(f"DAG file not found: {dag}")
+    report = (
+        Path(args.report_file).expanduser()
+        if args.report_file
+        else dag.with_suffix(".report.json")
+    )
+    report = report if report.is_absolute() else repo / report
+    if args.execute:
+        if not report.is_file():
+            raise SystemExit(f"compiled DAG report required for execution: {report}")
+        report_data = json.loads(report.read_text(encoding="utf-8"))
+        actual_hash = hashlib.sha256(dag.read_bytes()).hexdigest()
+        if report_data.get("dagSha256") != actual_hash:
+            raise SystemExit(
+                "DAG differs from its compilation report; recompile before execution"
+            )
+        if report_data.get("draft") is True:
+            raise SystemExit(
+                "compiled DAG still contains draft placeholders; resolve the spec and recompile"
+            )
     output.mkdir(parents=True, exist_ok=True)
 
     backend = resolve_backend()

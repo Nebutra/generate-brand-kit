@@ -24,17 +24,16 @@ signatures into one mark merely to appear contemporary.
   (Threerooms #1 shift; Pentagram's Cytora; Stripe/Linear/Vercel treat
   animated logo states as core brand). Quality bar: practitioners reject
   "motion for motion's sake."
-- **Machine vs maker.** AI-slick output triggered a craft revival: Adobe's
-  2026 Design Trends Report says 78% of designers intentionally add human
-  imperfection (wobbly lines, irregular shapes, naive art). The market
-  rewards AI-assisted work and punishes visibly pure-AI output.
+- **Machine vs maker.** Current studio and publication reports describe a craft
+  revival in response to visibly generic AI output: irregular drawing,
+  print-process evidence, and deliberate human editing are increasingly used to
+  signal authorship. Treat this as a trend signal, not a quantified market fact.
 - **Anti-blanding.** Creative Boom 2026: "the enemy of a good brand is no
   longer a bad brand, but one that is just okay." Weird, curated maximalism
   (Eternal Research, Fhirst, Clue Perfumery) answers sanitized sameness.
   Loewy's MAYA (Most Advanced Yet Acceptable) is the calibration dial.
-- **Evolution over revolution.** 2025's respected rebrands were system
-  refinements (Koto's Amazon, Walmart). Cracker Barrel's heritage-erasing
-  reveal cost ~$100M in market cap and was reversed. For migrations:
+- **Evolution over revolution.** Several prominent 2025 rebrands favored system
+  refinement over equity-erasing replacement. For migrations:
   respect existing equity; audit what is distinctive before replacing it.
 
 ## Named rising aesthetics
@@ -56,8 +55,7 @@ signatures into one mark merely to appear contemporary.
 
 Glassmorphism and liquid-glass UI styling; gradients-on-everything; bento
 grids; extended Y2K nostalgia; lazy minimalism AND lazy maximalism; Canva
-template aesthetics; four-pointed AI sparkle (used by 7 of the top 10
-software companies by 2024 — now a cliché); purple-blue gradient orbs;
+template aesthetics; ubiquitous four-pointed AI sparkles; purple-blue gradient orbs;
 splashy big-reveal rebrands.
 
 ## Trend-tracking resources

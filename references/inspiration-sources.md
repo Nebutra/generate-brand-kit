@@ -4,6 +4,11 @@ Reference galleries, communities, and repos — mapped to the pipeline stage
 where each is actually useful. Do not treat them as interchangeable
 "inspiration"; each answers a different question. URLs verified 2026-07.
 
+## Contents
+
+Pipeline-stage sources; GitHub ecosystem; brand-as-code standards; AI-era
+practice.
+
 ## By pipeline stage
 
 ### Moodboard / foundation-board stage

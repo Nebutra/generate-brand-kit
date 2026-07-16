@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "stage": "production",
+  "promptVersion": "brand-vi-prompt-v1",
+  "draft": false,
+  "taskCount": 3,
+  "tasks": [
+    {
+      "id": "symbol-production-master",
+      "assetClass": "symbol-master",
+      "ratio": "1:1",
+      "refs": [
+        "approved/core-mark.png"
+      ],
+      "promptHash": "68096a74674a98c4beb4118ecaa0b76866f3d9b862fa35bf0653d5748fb2a4dc"
+    },
+    {
+      "id": "application-readme-hero",
+      "assetClass": "hero-background",
+      "ratio": "2:1",
+      "refs": [
+        "@symbol-production-master"
+      ],
+      "promptHash": "85296880fcea05cdcfb7fc1352f654847c051a1cc3100f4f94f0368faba6e04f"
+    },
+    {
+      "id": "application-social-preview",
+      "assetClass": "social-preview",
+      "ratio": "2:1",
+      "refs": [
+        "@symbol-production-master"
+      ],
+      "promptHash": "17cd0bf027400def4cc250d51f4d56712e955384606950245c86d5a0d472315c"
+    }
+  ],
+  "dagSha256": "bfccf1997faba830a5f98df7a47e3c05701201641d9a74c471d9f514692f1594"
+}

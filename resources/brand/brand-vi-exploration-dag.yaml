@@ -1,0 +1,146 @@
+# Compiled by compile_brand_image_dag.py. Do not hand-edit sibling prompts.
+tasks:
+  - id: "symbol-assembly-gap"
+    name: "symbol-assembly-gap"
+    ratio: "1:1"
+    prompt: |-
+      TASK
+      Create exactly one isolated black-and-white symbol candidate for generate-brand-vi.
+
+      STRATEGY
+      Brand philosophy: A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.. Business tension: independent brand assets versus one governed system.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels
+
+      REFERENCE AUTHORITY
+      No visual reference controls form at exploration stage; use only the approved strategy and operation.
+
+      ONE VARIATION MECHANISM
+      Use only one controlled assembly gap. Distinctive rule: different modular parts resolve into one silhouette while one join remains visibly in progress.
+
+      OUTPUT AND SCENE
+      One centered flat black symbol on pure white, square 1:1. No wordmark, letters, board, scene, or mockup.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "symbol-shared-register"
+    name: "symbol-shared-register"
+    ratio: "1:1"
+    prompt: |-
+      TASK
+      Create exactly one isolated black-and-white symbol candidate for generate-brand-vi.
+
+      STRATEGY
+      Brand philosophy: A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.. Business tension: creative variation versus production consistency.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels
+
+      REFERENCE AUTHORITY
+      No visual reference controls form at exploration stage; use only the approved strategy and operation.
+
+      ONE VARIATION MECHANISM
+      Use only one shared registration axis. Distinctive rule: heterogeneous parts align to one production register without becoming identical tiles.
+
+      OUTPUT AND SCENE
+      One centered flat black symbol on pure white, square 1:1. No wordmark, letters, board, scene, or mockup.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "symbol-nested-boundary"
+    name: "symbol-nested-boundary"
+    ratio: "1:1"
+    prompt: |-
+      TASK
+      Create exactly one isolated black-and-white symbol candidate for generate-brand-vi.
+
+      STRATEGY
+      Brand philosophy: A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.. Business tension: open composition versus controlled asset boundary.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels
+
+      REFERENCE AUTHORITY
+      No visual reference controls form at exploration stage; use only the approved strategy and operation.
+
+      ONE VARIATION MECHANISM
+      Use only one nested boundary interruption. Distinctive rule: an outer system contains distinct parts while a single opening signals extensibility.
+
+      OUTPUT AND SCENE
+      One centered flat black symbol on pure white, square 1:1. No wordmark, letters, board, scene, or mockup.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "wordmark-registered-terminal"
+    name: "wordmark-registered-terminal"
+    ratio: "3:1"
+    prompt: |-
+      TASK
+      Create exactly one isolated custom wordmark spelling generate-brand-vi with exact readable letters.
+
+      STRATEGY
+      Brand philosophy: A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.. Typographic tension: engineering precision versus approachable creative work.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels
+
+      REFERENCE AUTHORITY
+      No visual reference controls form at exploration stage; use only the approved strategy and operation.; No external typeface is a form donor unless the spec explicitly approves it.
+
+      ONE VARIATION MECHANISM
+      Use only one registered terminal cut. Distinctive rule: selected terminals share one cut angle without reducing readability.
+
+      OUTPUT AND SCENE
+      One flat black wordmark on pure white, wide 3:1. No symbol, alphabet, board, scene, or mockup.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "wordmark-modular-counter"
+    name: "wordmark-modular-counter"
+    ratio: "3:1"
+    prompt: |-
+      TASK
+      Create exactly one isolated custom wordmark spelling generate-brand-vi with exact readable letters.
+
+      STRATEGY
+      Brand philosophy: A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.. Typographic tension: individual modules versus shared identity.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels
+
+      REFERENCE AUTHORITY
+      No visual reference controls form at exploration stage; use only the approved strategy and operation.; No external typeface is a form donor unless the spec explicitly approves it.
+
+      ONE VARIATION MECHANISM
+      Use only one modular counterform rule. Distinctive rule: counters repeat a parts grammar while exact spelling remains primary.
+
+      OUTPUT AND SCENE
+      One flat black wordmark on pure white, wide 3:1. No symbol, alphabet, board, scene, or mockup.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation
+  - id: "wordmark-assembly-rhythm"
+    name: "wordmark-assembly-rhythm"
+    ratio: "3:1"
+    prompt: |-
+      TASK
+      Create exactly one isolated custom wordmark spelling generate-brand-vi with exact readable letters.
+
+      STRATEGY
+      Brand philosophy: A brand engineering skill assembles approved identity parts into one consistent, product-consumable system.. Typographic tension: serial production versus composable selection.
+
+      INVARIANT LOCK
+      modular construction governed by one repeatable operation; one recognizable silhouette and one distinctive interruption; flat geometry remains legible in black and white at 32 pixels
+
+      REFERENCE AUTHORITY
+      No visual reference controls form at exploration stage; use only the approved strategy and operation.; No external typeface is a form donor unless the spec explicitly approves it.
+
+      ONE VARIATION MECHANISM
+      Use only one controlled spacing interruption. Distinctive rule: one repeatable spacing event creates recognition without fragmenting the name.
+
+      OUTPUT AND SCENE
+      One flat black wordmark on pure white, wide 3:1. No symbol, alphabet, board, scene, or mockup.
+
+      NEGATIVE CONSTRAINTS
+      no Microsoft four-pane flag reading; no droplet, crystal, sparkle, magic wand, or generic AI symbol; no decorative material used to rescue weak geometry; no logo board or contact sheet; no secondary candidate; no caption or generated explanatory text; no watermark; no mockup unless the task explicitly requests one; no decorative glow, glass, bevel, extrusion, or unrelated texture; no literal category pictogram or familiar trademark imitation

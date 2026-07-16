@@ -1,0 +1,29 @@
+{
+  "brand": "Example",
+  "wordmark": "approved/wordmark.png",
+  "sharedGlyphDna": [
+    "high-contrast display construction",
+    "shared wedge terminal",
+    "open counters and compact cap rhythm"
+  ],
+  "motherGlyphs": {
+    "A": "references/mother-glyphs/A.png",
+    "C": "references/mother-glyphs/C.png",
+    "I": "references/mother-glyphs/I.png",
+    "N": "references/mother-glyphs/N.png",
+    "R": "references/mother-glyphs/R.png"
+  },
+  "dependencies": {
+    "B": ["R"],
+    "D": ["C", "I"],
+    "O": ["C"],
+    "a": ["A"],
+    "n": ["N"],
+    "o": ["C"]
+  },
+  "constructions": {
+    "B": "Use the accepted R stem and counter logic, resolving two readable bowls.",
+    "O": "Close the accepted C curve while preserving its contrast and overshoot."
+  },
+  "acceptedControls": {}
+}

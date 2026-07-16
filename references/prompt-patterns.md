@@ -1,5 +1,48 @@
 # Prompt Patterns
 
+## Contents
+
+Compiled contract; observable evidence; foundation, form-family, approved,
+production-icon and background prompts; standing negatives; hygiene.
+
+## Compiled Prompt Contract
+
+Compile every related prompt in the same order. Keep the shared clauses stable
+across siblings and change only the intended mechanism:
+
+1. **Output intent:** identify the exact asset class and its native ratio.
+2. **Invariant lock:** state geometry, proportion, counterform, posture, copy,
+   or layout relationships that must not change.
+3. **Reference roles:** state what each input controls and what it must not
+   contribute.
+4. **Single mechanism:** name one transformation such as ink overlap, paper
+   layering, pixelation, fold, weave, or controlled color partition.
+5. **Scene constraints:** state background, camera, light, depth, safe area, and
+   whether the result is flat artwork or a physical object.
+6. **Targeted negatives:** ban the likely failure modes for this exact node,
+   followed by the standing global negatives.
+
+Do not let sibling prompts drift between terse labels and long art direction.
+Store shared clauses once in a prompt builder or DAG compiler when a batch is
+large enough that manual repetition becomes error-prone.
+
+## Observable Evidence, Not Style Labels
+
+A named movement, era, or process may identify a research source, but it is not
+a sufficient generation instruction. Expand it into observable rules:
+
+- grid and alignment;
+- scale hierarchy and negative-space ratio;
+- shape inventory, line weight, rhythm, and orientation;
+- palette roles and overlap behavior;
+- substrate, ink, stitch, pixel, or material process;
+- lighting and depth limits;
+- boundary behavior: what may occur only inside the approved silhouette.
+
+During review, ask whether the intended mechanism remains legible after hiding
+the prompt. If two sibling outputs differ only by color, gloss, or noise, their
+prompts do not define distinct mechanisms.
+
 ## Foundation Board Prompt
 
 Use for mood, palette, and material before logo work:

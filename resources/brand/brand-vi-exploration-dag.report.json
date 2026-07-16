@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "stage": "exploration",
+  "promptVersion": "brand-vi-prompt-v1",
+  "draft": false,
+  "taskCount": 6,
+  "tasks": [
+    {
+      "id": "symbol-assembly-gap",
+      "assetClass": "symbol-exploration",
+      "ratio": "1:1",
+      "refs": [],
+      "promptHash": "18f512422e834349429469c541524d8ff9331a8b6e2e990e29515a0b770bffcf"
+    },
+    {
+      "id": "symbol-shared-register",
+      "assetClass": "symbol-exploration",
+      "ratio": "1:1",
+      "refs": [],
+      "promptHash": "8009bdfa00cdf50e691bd44339a19141d7b4e2c9ba2e79d6dd15053f11196e18"
+    },
+    {
+      "id": "symbol-nested-boundary",
+      "assetClass": "symbol-exploration",
+      "ratio": "1:1",
+      "refs": [],
+      "promptHash": "bc8834042e22aca08245aa8ee5a39bd7ba7b8bfe2a94acd48386ab574f008312"
+    },
+    {
+      "id": "wordmark-registered-terminal",
+      "assetClass": "wordmark-exploration",
+      "ratio": "3:1",
+      "refs": [],
+      "promptHash": "10fb7110da1436f19fcfc99c5f0ea04ff1e79f35fb0bae4ccdc777892276f1ef"
+    },
+    {
+      "id": "wordmark-modular-counter",
+      "assetClass": "wordmark-exploration",
+      "ratio": "3:1",
+      "refs": [],
+      "promptHash": "b9089e6d40f16518982bd6426792f8af05a7cfe322fdf7374b193e86c76be517"
+    },
+    {
+      "id": "wordmark-assembly-rhythm",
+      "assetClass": "wordmark-exploration",
+      "ratio": "3:1",
+      "refs": [],
+      "promptHash": "690230c9fa9183c5536815d9ef0a819fc88ff5c90255a8392e3fe89c43d7724d"
+    }
+  ],
+  "dagSha256": "aab4c53f44735b184fd72ebc3a4729231d98dbf6770384352e76db4f3bb77c13"
+}
